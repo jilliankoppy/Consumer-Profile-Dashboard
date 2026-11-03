@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Orbit — Local History Connector",
+  "version": "1.0.0",
+  "description": "Share a chosen period of Chrome history with your local Orbit dashboard, only after your approval.",
+  "optional_permissions": ["history"],
+  "background": { "service_worker": "background.js" },
+  "action": {
+    "default_title": "Orbit connection",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://jilliankoppy.github.io/Consumer-Profile-Dashboard/*",
+        "http://localhost:5173/Consumer-Profile-Dashboard/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": { "16": "icon16.png", "48": "icon48.png", "128": "icon128.png" }
+}

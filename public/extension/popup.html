@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Orbit history permission</title>
+    <style>
+      body {
+        width: 285px;
+        background: #12151d;
+        color: #ede8f6;
+        font: 13px system-ui;
+        padding: 20px;
+        line-height: 1.7;
+      }
+      h1 {
+        font-weight: 500;
+        font-size: 22px;
+      }
+      p {
+        color: #a9a1b8;
+      }
+      button {
+        background: #c4b0f0;
+        border: 0;
+        border-radius: 5px;
+        padding: 12px;
+        width: 100%;
+        cursor: pointer;
+      }
+      small {
+        display: block;
+        margin-top: 15px;
+        color: #9d92af;
+      }
+      #revoke {
+        margin-top: 10px;
+        background: #292332;
+        color: #d1c3e3;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Connect your orbit.</h1>
+    <p>
+      Approve access to website URLs, titles, and last visit times. History is
+      shared only when you start analysis in the authorized Orbit dashboard. No
+      credentials or cookies are accessed.
+    </p>
+    <button id="approve">Approve history access</button
+    ><button id="revoke">Revoke history access</button
+    ><small id="status" role="status">Nothing is sent to a server.</small>
+    <script src="popup.js"></script>
+  </body>
+</html>
